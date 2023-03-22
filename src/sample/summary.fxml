@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="665.0" prefWidth="1026.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SummaryController">
+   <children>
+      <Button layoutX="73.0" layoutY="40.0" mnemonicParsing="false" onAction="#onGroupASummary" text="View Group A Standings" />
+       <Button layoutX="301.0" layoutY="40.0" mnemonicParsing="false" onAction="#onGroupBSummary" text="View Group B Standings" />
+      <Button layoutX="507.0" layoutY="40.0" mnemonicParsing="false" onAction="#onMatchSummary" text="View Matches Summary" />
+      <Button layoutX="717.0" layoutY="40.0" mnemonicParsing="false" onAction="#onPlayerSummary" text="View Players Summary" />
+      <Pane fx:id="summaryContainer" layoutX="55.0" layoutY="76.0" prefHeight="519.0" prefWidth="966.0">
+           <children>
+              <TableView fx:id="matchesSummary" layoutX="17.0" layoutY="50.0" prefHeight="450.0" prefWidth="866.0" visible="false">
+                  <columns>
+                      <TableColumn prefWidth="93.59998893737793" text="Stage">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="stage" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="156.79999542236328" text="Toss">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="toss" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="189.80001831054688" text="Teams">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="teams" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="141.39996337890625" text="First Batting">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="firstBatting" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn minWidth="0.0" prefWidth="153.39996337890625" text="Second Batting">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="secondBatting" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="131.4000244140625" text="Winner">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="winner" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+              </TableView>
+               <TableView fx:id="playerSummary" layoutX="226.0" layoutY="50.0" prefHeight="450.0" prefWidth="561.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="171.19998168945312" text="Player Name">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="player" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="0.0" prefWidth="148.0" text="Country">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="country" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="104.800048828125" text="Runs">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="runs" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="137.4000244140625" text="Wickets">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="wickets" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <TableView fx:id="groupSummary" layoutX="267.0" layoutY="50.0" prefHeight="180.0" prefWidth="433.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="139.20004272460938" text="Team">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="team" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="66.39999389648438" text="Matches">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="matches" />
+                   </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="69.0" text="Wins">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="wins" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="76.79998779296875" text="Loses">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="loses" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="83.00006103515625" text="Points">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="points" />
+                     </cellValueFactory>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <Label fx:id="lblSummary" layoutX="401.0" layoutY="13.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+
+           </children>
+      </Pane>
+      <Button layoutX="925.0" layoutY="617.0" mnemonicParsing="false" onAction="#onFinish" text="Finish" />
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TeamProfileController">
+   <children>
+      <Button layoutX="48.0" layoutY="543.0" mnemonicParsing="false" onAction="#gotoTeams" text="Back" />
+      <Label fx:id="teamName" layoutX="272.0" layoutY="25.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <VBox fx:id="playerContainer" layoutX="48.0" layoutY="57.0" prefHeight="271.0" prefWidth="492.0" />
+   </children>
+</AnchorPane>

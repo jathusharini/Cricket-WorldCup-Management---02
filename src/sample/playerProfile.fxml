@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="276.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayerProfileController">
+   <children>
+      <Label fx:id="playerName" layoutX="204.0" layoutY="25.0" text="Label" />
+      <Label layoutX="67.0" layoutY="83.0" text="Name" />
+      <TextField fx:id="txtName" layoutX="168.0" layoutY="79.0" prefHeight="26.0" prefWidth="192.0" />
+      <Label layoutX="67.0" layoutY="129.0" text="Role" />
+      <RadioButton layoutX="168.0" layoutY="129.0" mnemonicParsing="false" text="Batsman">
+         <toggleGroup>
+            <ToggleGroup fx:id="role" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="273.0" layoutY="129.0" mnemonicParsing="false" text="Bowler">
+         <toggleGroup>
+            <fx:reference source="role" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="169.0" layoutY="161.0" mnemonicParsing="false" text="All rounder">
+         <toggleGroup>
+            <fx:reference source="role" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="274.0" layoutY="161.0" mnemonicParsing="false" text="Wicket keeper Batsman">
+         <toggleGroup>
+            <fx:reference source="role" />
+         </toggleGroup>
+      </RadioButton>
+      <Button fx:id="btnBack" layoutX="52.0" layoutY="225.0" mnemonicParsing="false" onAction="#onGoBack" text="Back" />
+      <Button fx:id="btnSave" layoutX="114.0" layoutY="225.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TournamentController">
+   <children>
+      <TableView fx:id="summaryTable" layoutX="17.0" layoutY="26.0" prefHeight="497.0" prefWidth="866.0">
+        <columns>
+            <TableColumn prefWidth="93.59998893737793" text="Stage">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stage" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="156.79999542236328" text="Toss">
+                <cellValueFactory>
+                    <PropertyValueFactory property="toss" />
+                </cellValueFactory>
+            </TableColumn>
+          <TableColumn prefWidth="189.80001831054688" text="Teams">
+              <cellValueFactory>
+                  <PropertyValueFactory property="teams" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="141.39996337890625" text="First Batting">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstBatting" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="153.39996337890625" text="Second Batting">
+                <cellValueFactory>
+                    <PropertyValueFactory property="secondBatting" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="131.4000244140625" text="Winner">
+                <cellValueFactory>
+                    <PropertyValueFactory property="winner" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="btnPlay" layoutX="699.0" layoutY="550.0" mnemonicParsing="false" onAction="#onPlayTournament" text="Start Tournament" />
+      <Label fx:id="lblWinner" alignment="CENTER" layoutX="145.0" layoutY="543.0" prefHeight="18.0" prefWidth="350.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
